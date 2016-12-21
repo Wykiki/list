@@ -10,11 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME =		test
+NAME =		list.a
 
 SRC_NAME =	\
-			main\
-			lst_add
+			lst_new\
+			lst_del\
+			lst_size\
+			lst_append\
+			lst_prepend\
+			lst_head\
+			lst_tail\
+			lst_swap\
+			lst_for_each
 
 EXT = .c
 
@@ -25,6 +32,8 @@ OBJ_DIR =		./obj/
 CC = 		clang
 FLAGS = 	-Wall -Werror -Wextra
 
+AR = ar rc
+
 SRC =		$(addprefix $(SRC_DIR), $(addsuffix $(EXT), $(SRC_NAME)))
 OBJ	=		$(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 
@@ -33,9 +42,9 @@ NAME_TAR =	transfer.tar
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(LIBFTMLX) $(OBJ)
-	@$(CC) $(MLX_FLAGS) $^ -o $@
-	@echo "\033[92;1mScop compiled\033[0m";
+$(NAME): $(OBJ)
+	@$(AR) $@ $^
+	@echo "\033[92;1mList compiled\033[0m";
 
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
@@ -49,11 +58,11 @@ $(OBJ_DIR)%.o: %.c
 
 clean:
 	@rm -rf $(OBJ)
-	@echo "\033[91;1mScop objects removed\033[0m";
+	@echo "\033[91;1mList objects removed\033[0m";
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "\033[91;1mScop binary removed\033[0m";
+	@echo "\033[91;1mList binary removed\033[0m";
 
 
 re: fclean all
