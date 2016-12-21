@@ -16,6 +16,10 @@ void	lst_swap(t_node *lhs, t_node *rhs)
 {
 	t_node	*tmp;
 
+	if (lhs->prev != NULL)
+		lhs->prev->next = rhs;
+	if (rhs->next != NULL)
+		rhs->next->prev = lhs;
 	tmp = lhs->prev;
 	lhs->prev = rhs->prev;
 	rhs->prev = tmp;
