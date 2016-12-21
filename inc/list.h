@@ -13,7 +13,6 @@
 #ifndef LIST_H
 # define LIST_H
 
-# include <stdio.h>
 # include <stdlib.h>
 
 typedef struct	s_node
@@ -33,6 +32,6 @@ t_node			*lst_head(t_node *lst);
 t_node			*lst_tail(t_node *lst);
 
 void			lst_swap(t_node *lhs, t_node *rhs);
-//void			lst_for_each(t_node *lst, void (*func)(void *));
+void			lst_for_each(t_node *lst, void (*func)(void *));
 
 #endif
