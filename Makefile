@@ -6,7 +6,7 @@
 #    By: jle-mene <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/19 11:31:35 by jle-mene          #+#    #+#              #
-#    Updated: 2016/12/20 12:10:10 by jle-mene         ###   ########.fr        #
+#    Updated: 2016/12/23 16:06:26 by jle-mene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRC_NAME =	\
 			lst_size\
 			lst_append\
 			lst_prepend\
+			lst_prev\
+			lst_next\
 			lst_head\
 			lst_tail\
 			lst_swap\

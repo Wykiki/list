@@ -6,7 +6,7 @@
 /*   By: jle-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 12:10:43 by jle-mene          #+#    #+#             */
-/*   Updated: 2016/12/23 09:18:25 by jle-mene         ###   ########.fr       */
+/*   Updated: 2016/12/23 16:03:10 by jle-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ size_t			lst_size(t_node *lst);
 
 void			lst_append(t_node *lst, t_node *elem);
 void			lst_prepend(t_node *lst, t_node *elem);
+void			*lst_prev(t_node *lst);
+void			*lst_next(t_node *lst);
 t_node			*lst_head(t_node *lst);
 t_node			*lst_tail(t_node *lst);
 
