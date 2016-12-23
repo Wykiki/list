@@ -6,7 +6,7 @@
 /*   By: jle-mene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 12:10:43 by jle-mene          #+#    #+#             */
-/*   Updated: 2016/12/20 15:07:43 by jle-mene         ###   ########.fr       */
+/*   Updated: 2016/12/23 09:18:25 by jle-mene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct	s_node
 	void			*self;
 }				t_node;
 
-void			*lst_new(void *(*init)(t_node));
+t_node			*lst_new(t_node *(*init)(t_node));
 void			lst_del(t_node **lst, void (*del)(void *));
 size_t			lst_size(t_node *lst);
 
